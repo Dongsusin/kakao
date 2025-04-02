@@ -12,6 +12,9 @@ a:visited {
 li {
   list-style: none;
 }
+body {
+  overflow-x: hidden;
+}
 /*header*/
 header {
   width: 100%;
@@ -25,14 +28,17 @@ header {
   transition: all 1s;
 }
 header .container {
-  max-width: 1280px;
   height: 72px;
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+.container {
+  max-width: 1280px;
   margin: 0 auto;
   position: relative;
-  display: flex;
 }
 header .logo a {
-  height: auto;
   vertical-align: middle;
 }
 header .logo a img {
@@ -44,6 +50,7 @@ header nav {
   position: relative;
   text-align: center;
   z-index: 1;
+  display: block;
 }
 header nav ul {
   display: inline-block;
@@ -62,12 +69,20 @@ header nav ul li:hover {
   color: black;
 }
 header .career {
-  display: inline-block;
+  display: block;
   font-size: 15px;
   line-height: 72px;
   font-weight: 600;
   color: black;
   text-wrap: nowrap;
+}
+header .menu {
+  display: none;
+  height: 50px;
+}
+header .menu img {
+  width: 34px;
+  height: 36px;
 }
 /*visual*/
 #visual {
@@ -129,11 +144,6 @@ header .career {
 /*news*/
 #news {
   padding: 140px 0 160px;
-}
-#news .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  position: relative;
 }
 #news .news-title {
   width: 562px;
@@ -210,7 +220,7 @@ header .career {
   height: 500px;
 }
 #news .tag {
-  margin: 18px 0 0;
+  margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -230,7 +240,6 @@ header .career {
 #news .more-content a {
   display: inline-block;
   vertical-align: middle;
-  padding: 0 67px 0 20px;
   position: relative;
   text-align: center;
   font-size: 16px;
@@ -243,11 +252,6 @@ header .career {
 /*banner*/
 #banner {
   padding-bottom: 160px;
-}
-#banner .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  position: relative;
 }
 #banner .back {
   width: 100%;
@@ -305,11 +309,6 @@ header .career {
 #business {
   padding-bottom: 160px;
 }
-#business .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  position: relative;
-}
 #business .head {
   margin-bottom: 70px;
 }
@@ -352,11 +351,6 @@ header .career {
 footer {
   width: 100%;
   padding: 32px 0 118px;
-  position: relative;
-}
-footer .container {
-  max-width: 1280px;
-  margin: 0 auto;
   position: relative;
 }
 footer .extend {
@@ -435,4 +429,417 @@ footer .copyright {
   font-size: 15px;
   font-weight: 600;
   line-height: 1.25;
+}
+/*반응형*/
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 850px;
+  }
+  header,
+  header .container {
+    height: 50px;
+  }
+  header nav ul li {
+    height: 50px;
+    padding: 16px 24px;
+    font-size: 11px;
+  }
+  header .logo a {
+    vertical-align: top;
+  }
+  header .logo a img {
+    height: 16px;
+  }
+  header .career {
+    line-height: 50px;
+  }
+  .next,
+  .prev {
+    width: 33px;
+    height: 33px;
+  }
+  #news .news-title img:nth-child(1) {
+    width: 162px;
+  }
+  #news .news-title img:nth-child(2) {
+    width: 103px;
+  }
+  #news .news-title img:nth-child(3) {
+    width: 130px;
+  }
+  #news .news-title img:nth-child(4) {
+    width: 72px;
+    top: 105px;
+    left: 138px;
+  }
+  #news .left,
+  #news .right,
+  #news .left img,
+  #news .right img,
+  #news .image .image-01 {
+    width: 395px;
+  }
+  #news .title img {
+    width: 20px;
+    height: 20px;
+  }
+  #news .image h3 {
+    font-size: 15px;
+  }
+  #news .tag {
+    margin-top: 12px;
+  }
+  #news .tag a {
+    font-size: 9px;
+  }
+  #banner .back {
+    height: 235px;
+  }
+  #banner .wrap {
+    margin: 0 55px;
+  }
+  #banner .inner h2 {
+    font-size: 24px;
+  }
+  #banner .link a {
+    font-size: 11px;
+    padding: 10px 28px;
+  }
+  #business .head h2 {
+    font-size: 32px;
+  }
+  #business .list .label {
+    font-size: 11px;
+  }
+  #business .list .txt {
+    font-size: 14px;
+  }
+  #business .list .link {
+    font-size: 10px;
+  }
+  footer {
+    padding: 20px 0 80px;
+  }
+  footer .copyright {
+    font-size: 10px;
+  }
+  footer .extend nav ul li a {
+    font-size: 9px;
+  }
+  footer .button button {
+    width: 100px;
+  }
+  footer .button button span {
+    font-size: 8px;
+  }
+  footer .wrap ul li img {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+  header,
+  header .container {
+    height: 36px;
+  }
+  header nav,
+  header .career {
+    display: none;
+  }
+  header .menu {
+    display: block;
+  }
+  header .logo a img {
+    height: 36px;
+  }
+  .next,
+  .prev {
+    width: 44px;
+    height: 44px;
+  }
+  #news {
+    padding: 100px 0 130px;
+  }
+  #news .news-title img:nth-child(1) {
+    width: 180px;
+  }
+  #news .news-title img:nth-child(2) {
+    width: 115px;
+  }
+  #news .news-title img:nth-child(3) {
+    width: 148px;
+  }
+  #news .news-title img:nth-child(4) {
+    width: 88px;
+    top: 110px;
+    left: 150px;
+  }
+  #news .left,
+  #news .right {
+    width: 334px;
+  }
+  #news .left img,
+  #news .right img {
+    width: 334px;
+    height: 190px;
+  }
+  #news .image .image-01 {
+    width: 334px;
+    height: 300px;
+  }
+  #news .title img {
+    width: 20px;
+    height: 20px;
+  }
+  #news .image h3 {
+    font-size: 19px;
+  }
+  #news .tag {
+    margin-top: 16px;
+  }
+  #news .tag a {
+    font-size: 14px;
+  }
+  #banner .back {
+    height: 274px;
+  }
+  #banner .wrap {
+    margin: 0 55px;
+  }
+  #banner .inner {
+    display: flex;
+    flex-direction: column;
+  }
+  #banner .inner h2 {
+    text-align: center;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    font-size: 28px;
+  }
+  #banner .link {
+    position: relative;
+    top: 20px;
+    left: 35%;
+  }
+  #banner .link a {
+    font-size: 15px;
+    padding: 14px 36px 15px;
+  }
+  #business .head h2 {
+    font-size: 38px;
+  }
+  #business .list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 48px;
+  }
+  #business .list .label {
+    font-size: 16px;
+  }
+  #business .list .txt {
+    font-size: 19px;
+  }
+  #business .list .link {
+    font-size: 15px;
+  }
+  footer {
+    padding: 30px 0 40px;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .copyright {
+    font-size: 14px;
+    text-align: center;
+  }
+  footer .extend nav ul li a {
+    font-size: 12px;
+  }
+  footer .button button {
+    width: 144px;
+  }
+  footer .button button span {
+    font-size: 12px;
+  }
+  footer .wrap {
+    position: relative;
+    top: 0;
+  }
+  footer .wrap ul li img {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .container {
+    max-width: 370px;
+  }
+  #banner .container {
+    max-width: 100%;
+  }
+  .next {
+    right: 30%;
+  }
+  .prev {
+    left: 30%;
+  }
+  #news {
+    padding: 100px 0 130px;
+  }
+  #news .news-content {
+    flex-direction: column;
+  }
+  #news .left,
+  #news .right {
+    width: 370px;
+  }
+  #news .left img,
+  #news .right img {
+    width: 370px;
+  }
+  #news .image .image-01 {
+    width: 370px;
+  }
+  #news .title img {
+    width: 20px;
+    height: 20px;
+  }
+  #news .image h3 {
+    font-size: 19px;
+  }
+  #news .tag {
+    margin-top: 16px;
+  }
+  #news .tag a {
+    font-size: 14px;
+  }
+  #banner .back {
+    height: 240px;
+    border-radius: 0;
+  }
+  #banner .wrap {
+    margin: 0 55px;
+  }
+  #banner .inner {
+    display: flex;
+    flex-direction: column;
+  }
+  #banner .inner h2 {
+    text-align: center;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    font-size: 24px;
+  }
+  #banner .link {
+    position: relative;
+    top: 20px;
+    left: 22.5%;
+  }
+  #banner .link a {
+    font-size: 15px;
+    padding: 14px 36px 15px;
+  }
+  #business .head h2 {
+    font-size: 38px;
+  }
+  #business .list {
+    display: flex;
+    flex-direction: column;
+  }
+  #business .list .label {
+    font-size: 16px;
+  }
+  #business .list .txt {
+    font-size: 19px;
+  }
+  #business .list .link {
+    font-size: 15px;
+  }
+  footer .copyright {
+    font-size: 14px;
+    text-align: center;
+  }
+  footer .extend {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  footer .extend nav {
+    width: 130px;
+    margin-bottom: 20px;
+  }
+  footer .extend nav ul li a {
+    font-size: 15px;
+    text-wrap: nowrap;
+  }
+  footer .button {
+    margin-left: 0;
+  }
+  footer .button button {
+    width: 100%;
+  }
+  footer .button button span {
+    font-size: 12px;
+  }
+  footer .wrap ul li img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 320px;
+  }
+  #news .left,
+  #news .right {
+    width: 320px;
+  }
+  #news .left img,
+  #news .right img {
+    width: 320px;
+  }
+  #news .image .image-01 {
+    width: 320px;
+  }
+  #news .title img {
+    width: 20px;
+    height: 20px;
+  }
+  #business .head h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .container {
+    max-width: 280px;
+  }
+  #news .left,
+  #news .right {
+    width: 280px;
+  }
+  #news .left img,
+  #news .right img {
+    width: 280px;
+  }
+  #news .image .image-01 {
+    width: 280px;
+  }
+  #news .title img {
+    width: 20px;
+    height: 20px;
+  }
+  #banner .inner h2 {
+    font-size: 12px;
+  }
+  #banner .link {
+    left: 10%;
+  }
+  #business .head h2 {
+    font-size: 24px;
+  }
 }
