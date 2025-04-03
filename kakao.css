@@ -22,10 +22,22 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: white;
+  background: transparent;
   border-bottom-color: transparent;
   z-index: 500;
   transition: all 1s;
+}
+header.on {
+  background-color: #fff;
+}
+header.on nav ul li {
+  color: gray;
+}
+header:hover {
+  background-color: #fff;
+}
+header:hover nav ul li {
+  color: gray;
 }
 header .container {
   height: 72px;
@@ -62,7 +74,7 @@ header nav ul li {
   height: 72px;
   font-size: 15px;
   font-weight: 600;
-  color: gray;
+  color: white;
   cursor: pointer;
 }
 header nav ul li:hover {
@@ -73,7 +85,7 @@ header .career {
   font-size: 15px;
   line-height: 72px;
   font-weight: 600;
-  color: black;
+  color: white;
   text-wrap: nowrap;
 }
 header .menu {

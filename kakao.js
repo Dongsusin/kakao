@@ -83,3 +83,12 @@ function sliderEffect() {
   moveSlide(currentIdx + 1);
 }
 setInterval(sliderEffect, 8000);
+
+const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 0) {
+    header.classList.add("on");
+  } else {
+    header.classList.remove("on");
+  }
+});
