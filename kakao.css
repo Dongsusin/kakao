@@ -27,10 +27,16 @@ header {
   z-index: 500;
   transition: all 1s;
 }
-header.on {
+.nav-up {
+  top: -72px;
+}
+.on {
   background-color: #fff;
 }
-header.on nav ul li {
+.on nav ul li {
+  color: gray;
+}
+.on .career {
   color: gray;
 }
 header:hover {
@@ -87,6 +93,9 @@ header .career {
   font-weight: 600;
   color: white;
   text-wrap: nowrap;
+}
+header .career:hover {
+  color: black;
 }
 header .menu {
   display: none;
