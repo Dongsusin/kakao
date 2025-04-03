@@ -64,9 +64,6 @@ header {
     color: white;
     cursor: pointer;
   }
-  nav ul li:hover {
-    color: black;
-  }
   .career {
     display: block;
     font-size: 15px;
@@ -75,7 +72,7 @@ header {
     color: white;
     text-wrap: nowrap;
   }
-  .career:hover {
+  .container .career:hover {
     color: black;
   }
   .menu {
@@ -86,11 +83,15 @@ header {
     width: 34px;
     height: 36px;
   }
+  .container nav ul li:hover {
+    color: #000;
+  }
 }
 header:hover {
   background-color: #fff;
 }
-header:hover nav ul li {
+header:hover nav ul li,
+header:hover .career {
   color: gray;
 }
 .nav-up {
@@ -194,6 +195,11 @@ header:hover nav ul li {
     border-radius: 30px;
     margin-top: 48px;
     cursor: pointer;
+    transition: all 1s;
+  }
+  .text a:hover {
+    color: #ffb500;
+    border: 3px solid #ffb500;
   }
 }
 /*news*/
