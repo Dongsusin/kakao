@@ -79,3 +79,7 @@ function moveSlide(num) {
     }, 600);
   }
 }
+function sliderEffect() {
+  moveSlide(currentIdx + 1);
+}
+setInterval(sliderEffect, 8000);
