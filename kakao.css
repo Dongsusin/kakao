@@ -125,6 +125,7 @@ header .menu img {
   transition: 0.5s ease-out;
 }
 #visual .slides li {
+  position: relative;
   float: left;
   width: 100vw;
   height: 100vh;
@@ -132,6 +133,7 @@ header .menu img {
 #visual .slides li img {
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 #visual .controls {
   width: 100%;
@@ -160,6 +162,38 @@ header .menu img {
   background-size: contain;
   right: 40%;
   background-image: url(./image/next.png);
+  cursor: pointer;
+}
+.text {
+  width: 100vw;
+  padding-top: 48px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.text h2 {
+  font-size: 60px;
+  line-height: 1.26;
+  font-weight: 600;
+  color: #fff;
+}
+.text a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 16px 40px 17px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #fff;
+  background: transparent;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  margin-top: 48px;
   cursor: pointer;
 }
 /*news*/
@@ -557,6 +591,14 @@ footer .copyright {
     width: 22px;
     height: 22px;
   }
+  .text h2 {
+    font-size: 40px;
+  }
+  .text a {
+    padding: 10px 28px 10px;
+    font-size: 10px;
+    margin-top: 30px;
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
@@ -695,6 +737,13 @@ footer .copyright {
     width: 38px;
     height: 38px;
   }
+  .text h2 {
+    font-size: 40px;
+  }
+  .text a {
+    padding: 14px 28px 14px;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 426px) {
   .container {
@@ -811,6 +860,14 @@ footer .copyright {
     width: 40px;
     height: 40px;
   }
+  .text h2 {
+    font-size: 25px;
+  }
+  .text a {
+    padding: 10px 28px 10px;
+    font-size: 10px;
+    margin-top: 30px;
+  }
 }
 @media screen and (max-width: 376px) {
   .container {
@@ -862,5 +919,8 @@ footer .copyright {
   }
   #business .head h2 {
     font-size: 24px;
+  }
+  .text h2 {
+    font-size: 20px;
   }
 }
